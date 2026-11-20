@@ -1,87 +1,188 @@
 
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ATHALLA | My Personal Blog</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:#050b16;color:#f4f7ff;font-family:Arial,sans-serif;line-height:1.7}
+header{background:#091426;padding:18px 6%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;border-bottom:2px solid #087cff}
+.logo{font-size:27px;font-weight:bold;color:#168cff;letter-spacing:2px}
+nav a{color:white;text-decoration:none;margin:0 10px}
+nav a:hover{color:#168cff}
+.hero{min-height:300px;padding:75px 20px;text-align:center;background:linear-gradient(#061329b9,#061329d9),url('https://images.unsplash.com/photo-1519608487953-e999c86e7455?w=1400') center/cover}
+.hero h1{font-size:55px;color:#168cff;letter-spacing:7px}
+.hero p{font-size:18px;margin-top:10px}
+.container{max-width:1100px;margin:40px auto;padding:0 18px}
+.heading{font-size:29px;border-left:6px solid #168cff;padding-left:15px;margin-bottom:25px}
+.articles{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+article{background:#0d192c;border:1px solid #203858;border-radius:13px;overflow:hidden;transition:.3s}
+article:hover{transform:translateY(-5px);border-color:#168cff}
+article img{width:100%;height:240px;object-fit:cover;display:block}
+.content{padding:22px}
+.content h2{font-size:22px;color:#58adff;margin-bottom:12px}
+.content p{color:#d0dbea;margin-bottom:12px;text-align:justify}
+.tag{color:#20aaff;font-size:12px;font-weight:bold}
+.read{display:inline-block;margin-top:12px;padding:9px 17px;border:1px solid #168cff;border-radius:20px;color:#58adff;text-decoration:none}
+.read:hover{background:#087cff;color:white}
+.full-article{display:none}
+.full-article.show{display:block}
+.about{margin-top:45px;background:#0d192c;padding:30px;border:1px solid #168cff;border-radius:13px}
+.about h2{color:#58adff;margin-bottom:12px}
+footer{text-align:center;padding:30px;margin-top:40px;background:#091426;color:#aabbd2;border-top:1px solid #168cff}
+@media(max-width:650px){
+header{justify-content:center;gap:12px}
+nav{width:100%;text-align:center}
+nav a{margin:0 7px}
+.hero h1{font-size:38px}
+.articles{grid-template-columns:1fr}
+article img{height:220px}
+}
+</style>
+</head>
+<body>
 
-<section class="container" id="artikel">
-  <h2>Artikel Terbaru</h2>
+<header>
+<div class="logo">♛ ATHALLA</div>
+<nav>
+<a href="#home">Home</a>
+<a href="#artikel">Artikel</a>
+<a href="#tentang">Tentang</a>
+</nav>
+</header>
 
-  <div class="posts">
-
-    <article class="card">
-      <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=800" alt="Gaming">
-      <div class="card-content">
-        <span class="tag">GAMING</span>
-        <h3>Perjalanan Menjadi Pro Player</h3>
-        <p>Menjadi pemain profesional bukan hal mudah. Dibutuhkan latihan, konsistensi, dan semangat untuk terus berkembang.</p>
-        <button onclick="alert('Terus semangat mengejar impian menjadi pro player!')">Baca Selengkapnya</button>
-      </div>
-    </article>
-
-    <article class="card">
-      <img src="https://images.unsplash.com/photo-1510915361894-db8b60106cb1?w=800" alt="Gitar">
-      <div class="card-content">
-        <span class="tag">MUSIK</span>
-        <h3>Musik dan Gitar</h3>
-        <p>Musik bisa menjadi teman saat sedang bosan. Belajar gitar juga menjadi salah satu cara untuk mengembangkan kreativitas.</p>
-        <button onclick="alert('Musik adalah bahasa yang bisa dinikmati semua orang!')">Baca Selengkapnya</button>
-      </div>
-    </article>
-
-    <article class="card">
-      <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?w=800" alt="Alam">
-      <div class="card-content">
-        <span class="tag">TRAVELING</span>
-        <h3>Menikmati Keindahan Alam</h3>
-        <p>Alam selalu punya keindahan tersendiri. Mengunjungi tempat baru bisa memberikan pengalaman yang tidak terlupakan.</p>
-        <button onclick="alert('Jangan lupa menikmati keindahan alam!')">Baca Selengkapnya</button>
-      </div>
-    </article>
-
-    <article class="card">
-      <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800" alt="Teknologi">
-      <div class="card-content">
-        <span class="tag">TEKNOLOGI</span>
-        <h3>Perkembangan Teknologi</h3>
-        <p>Teknologi semakin berkembang dan membuat banyak pekerjaan menjadi lebih mudah. Internet juga membuka banyak peluang untuk belajar.</p>
-        <button onclick="alert('Terus belajar hal baru tentang teknologi!')">Baca Selengkapnya</button>
-      </div>
-    </article>
-
-    <article class="card">
-      <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=800" alt="Produktivitas">
-      <div class="card-content">
-        <span class="tag">MOTIVASI</span>
-        <h3>Jangan Takut Bermimpi</h3>
-        <p>Setiap kesuksesan dimulai dari sebuah mimpi. Jangan takut mencoba dan terus belajar dari setiap pengalaman.</p>
-        <button onclick="alert('Mulai dari langkah kecil hari ini!')">Baca Selengkapnya</button>
-      </div>
-    </article>
-
-    <article class="card">
-      <img src="https://images.unsplash.com/photo-1490730141103-6cac27aaab94?w=800" alt="Sunset">
-      <div class="card-content">
-        <span class="tag">KEHIDUPAN</span>
-        <h3>Cerita Kehidupan</h3>
-        <p>Hidup adalah perjalanan panjang yang penuh pengalaman. Nikmati prosesnya dan jadilah versi terbaik dari diri sendiri.</p>
-        <button onclick="alert('Setiap hari adalah kesempatan baru!')">Baca Selengkapnya</button>
-      </div>
-    </article>
-
-  </div>
+<section class="hero" id="home">
+<h1>ATHALLA</h1>
+<p>My Story, My Journey, My World.</p>
+<p>Dream Big • Keep Going • Never Give Up</p>
 </section>
 
-<section class="container" id="tentang">
-  <h2>Tentang CeritaKu</h2>
-  <p style="line-height:1.8;color:#555">
-    CeritaKu adalah blog pribadi yang berisi berbagai informasi,
-    cerita, pengalaman, dan inspirasi. Blog ini dibuat sebagai
-    tempat berbagi hal-hal menarik seputar kehidupan sehari-hari.
-  </p>
+<main class="container" id="artikel">
+<h1 class="heading">Artikel Terbaru</h1>
+
+<div class="articles">
+
+<article>
+<img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?w=700" alt="Buku catatan">
+<div class="content">
+<h2>1. CeritaKu</h2>
+<p>Setiap orang mempunyai cerita hidup masing-masing. Begitu juga denganku. Ada banyak pengalaman, kenangan, dan perjalanan yang membuat hidup menjadi lebih berwarna. Semua kejadian yang pernah aku alami menjadi bagian dari perjalanan hidupku.</p>
+<div class="full-article" id="artikel1">
+<p>Dalam kehidupan sehari-hari, aku sering menemukan hal-hal baru yang membuatku belajar. Ada pengalaman menyenangkan, ada juga kejadian yang membuatku harus lebih sabar dan berpikir lebih dewasa.</p>
+<p>Bagiku, semua pengalaman itu sangat berharga. Aku ingin menyimpan cerita-cerita tersebut agar suatu saat nanti bisa mengingat kembali perjalanan yang pernah aku lalui.</p>
+<p>Inilah CeritaKu, sebuah kisah sederhana tentang pengalaman, harapan, dan perjalanan untuk menjadi pribadi yang lebih baik.</p>
+</div>
+<span class="tag">CERITA PRIBADI</span><br>
+<a class="read" href="javascript:void(0)" onclick="toggleArticle('artikel1',this)">Baca Selengkapnya →</a>
+</div>
+</article>
+
+<article>
+<img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=700" alt="Gaming">
+<div class="content">
+<h2>2. Perjalanan Menuju Pro Player Free Fire</h2>
+<p>Awalnya aku bermain Free Fire hanya untuk bersenang-senang. Namun, semakin lama aku semakin tertarik dengan game ini. Aku mulai mempunyai impian untuk menjadi seorang pro player.</p>
+<div class="full-article" id="artikel2">
+<p>Aku mulai belajar banyak hal, seperti meningkatkan aim, mengatur sensitivitas, memahami map, menguasai karakter, serta mempelajari strategi permainan. Aku juga belajar bagaimana cara bekerja sama dengan tim.</p>
+<p>Perjalanan menjadi pro player tentu tidak mudah. Ada banyak tantangan yang harus dihadapi, mulai dari kekalahan, kesalahan saat bermain, sampai persaingan dengan pemain lain.</p>
+<p>Tetapi aku tidak ingin menyerah begitu saja. Aku ingin terus berlatih, meningkatkan kemampuan, mengikuti turnamen, dan suatu hari nanti bisa dikenal sebagai pemain profesional Free Fire.</p>
+<p>Bagiku, menjadi pro player bukan hanya tentang kemenangan, tetapi juga tentang proses, kerja keras, dan semangat untuk terus berkembang.</p>
+</div>
+<span class="tag">GAMING</span><br>
+<a class="read" href="javascript:void(0)" onclick="toggleArticle('artikel2',this)">Baca Selengkapnya →</a>
+</div>
+</article>
+
+<article>
+<img src="https://images.unsplash.com/photo-1593640408182-31c70c8268f5?w=700" alt="Komputer gaming">
+<div class="content">
+<h2>3. Hobi dan Kegiatan Favoritku</h2>
+<p>Setiap orang pasti mempunyai hobi yang berbeda-beda. Bagiku, hobi merupakan kegiatan yang bisa membuat waktu luang menjadi lebih menyenangkan.</p>
+<div class="full-article" id="artikel3">
+<p>Salah satu kegiatan yang aku sukai adalah bermain game. Selain itu, aku juga suka mendengarkan musik dan mencoba berbagai kegiatan baru.</p>
+<p>Menurutku, mempunyai hobi itu penting karena kita bisa mengembangkan kemampuan dan menemukan hal-hal yang kita sukai.</p>
+<p>Hobi juga bisa menjadi cara untuk menghilangkan rasa bosan setelah menjalani aktivitas sehari-hari.</p>
+<p>Aku berharap bisa terus mengembangkan hobiku dan menjadikannya sesuatu yang bermanfaat di masa depan.</p>
+</div>
+<span class="tag">HOBI</span><br>
+<a class="read" href="javascript:void(0)" onclick="toggleArticle('artikel3',this)">Baca Selengkapnya →</a>
+</div>
+</article>
+
+<article>
+<img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?w=700" alt="Pemandangan alam">
+<div class="content">
+<h2>4. Pengalaman yang Tidak Terlupakan</h2>
+<p>Dalam kehidupan, pasti ada banyak pengalaman yang sulit dilupakan. Beberapa pengalaman mungkin terlihat sederhana, tetapi mempunyai kenangan tersendiri.</p>
+<div class="full-article" id="artikel4">
+<p>Pengalaman bersama teman, keluarga, dan orang-orang di sekitar menjadi bagian penting dalam kehidupanku. Dari pengalaman tersebut, aku belajar tentang kebersamaan, menghargai orang lain, dan memahami arti persahabatan.</p>
+<p>Tidak semua pengalaman berjalan sesuai harapan. Terkadang ada kejadian yang membuat kecewa, tetapi dari situlah aku belajar untuk menjadi lebih baik.</p>
+<p>Setiap momen mempunyai cerita yang berbeda. Ada yang membuat bahagia, ada yang membuat tertawa, dan ada juga yang memberikan pelajaran berharga.</p>
+<p>Bagiku, pengalaman adalah sesuatu yang sangat berharga karena setiap kejadian selalu mempunyai pelajaran tersendiri.</p>
+</div>
+<span class="tag">PENGALAMAN</span><br>
+<a class="read" href="javascript:void(0)" onclick="toggleArticle('artikel4',this)">Baca Selengkapnya →</a>
+</div>
+</article>
+
+<article>
+<img src="https://images.unsplash.com/photo-1490730141103-6cac27aaab94?w=700" alt="Pemandangan matahari terbit">
+<div class="content">
+<h2>5. Impian dan Cita-Citaku</h2>
+<p>Setiap orang pasti mempunyai impian yang ingin dicapai. Begitu juga denganku. Aku mempunyai banyak harapan untuk masa depan dan ingin menjadi seseorang yang berhasil.</p>
+<div class="full-article" id="artikel5">
+<p>Untuk mencapai impian tersebut, tentu dibutuhkan usaha, semangat, dan kemauan untuk terus belajar. Aku sadar bahwa keberhasilan tidak bisa didapatkan secara instan.</p>
+<p>Ada banyak hal yang harus dipersiapkan, mulai dari meningkatkan kemampuan, memperluas pengetahuan, hingga berani mencoba sesuatu yang baru.</p>
+<p>Aku juga ingin membanggakan orang-orang yang selalu mendukungku dan membuat mereka ikut bahagia ketika aku berhasil mencapai sesuatu.</p>
+<p>Aku ingin membuktikan bahwa setiap orang mempunyai kesempatan untuk meraih impiannya selama mau berusaha dan tidak mudah menyerah.</p>
+</div>
+<span class="tag">MOTIVASI</span><br>
+<a class="read" href="javascript:void(0)" onclick="toggleArticle('artikel5',this)">Baca Selengkapnya →</a>
+</div>
+</article>
+
+<article>
+<img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=700" alt="Gunung">
+<div class="content">
+<h2>6. Terus Berusaha dan Jangan Menyerah</h2>
+<p>Dalam perjalanan mencapai sesuatu, pasti akan ada berbagai tantangan. Terkadang rencana tidak berjalan sesuai harapan dan hasil yang didapatkan tidak selalu seperti yang diinginkan.</p>
+<div class="full-article" id="artikel6">
+<p>Namun, kegagalan bukan berarti akhir dari segalanya. Justru dari kegagalan kita bisa mengetahui kesalahan dan belajar memperbaikinya.</p>
+<p>Aku percaya bahwa setiap proses membutuhkan waktu. Tidak semua hal bisa didapatkan dengan cepat. Karena itu, kita harus tetap berusaha, belajar, dan memperbaiki diri.</p>
+<p>Jangan terlalu cepat menyerah hanya karena mengalami kesulitan. Setiap langkah kecil yang kita lakukan bisa menjadi bagian dari perjalanan menuju tujuan yang lebih besar.</p>
+<p>Teruslah melangkah dan jadikan setiap pengalaman sebagai pelajaran untuk masa depan. Karena usaha yang dilakukan hari ini bisa menjadi awal dari keberhasilan di kemudian hari.</p>
+</div>
+<span class="tag">SEMANGAT</span><br>
+<a class="read" href="javascript:void(0)" onclick="toggleArticle('artikel6',this)">Baca Selengkapnya →</a>
+</div>
+</article>
+
+</div>
+
+<section class="about" id="tentang">
+<h2>Tentang Athalla</h2>
+<p>Halo! Aku Athalla. Ini adalah blog pribadiku yang berisi cerita, pengalaman, hobi, dan perjalanan hidupku. Blog ini dibuat sebagai tempat untuk berbagi tulisan dan menyimpan berbagai cerita menarik.</p>
+<p>Terima kasih sudah meluangkan waktu untuk berkunjung dan membaca blog ini. Semoga tulisan-tulisanku bisa memberikan inspirasi dan manfaat bagi kalian.</p>
 </section>
+</main>
 
 <footer>
-  <h3>CeritaKu.</h3>
-  <p>Terima kasih sudah berkunjung!</p>
-  <p style="margin-top:12px">© 2026 CeritaKu. All Rights Reserved.</p>
+<p>© 2026 ATHALLA BLOG | Dibuat dengan semangat. ❤️</p>
+<p>My Story, My Journey, My World.</p>
 </footer>
+
+<script>
+function toggleArticle(id,button){
+const article=document.getElementById(id);
+article.classList.toggle('show');
+button.innerHTML=article.classList.contains('show')
+?'Tutup Artikel ↑'
+:'Baca Selengkapnya →';
+}
+</script>
 
 </body>
 </html>
